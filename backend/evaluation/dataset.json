@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "github_url": "https://github.com/psf/requests/issues/5000",
+    "title": "Bug: chunked requests fail when header Content-Length is set",
+    "description": "When sending chunked transfer encoding, setting Content-Length causes the connection to stall or raise ProtocolError.",
+    "reference_label": "CONFIRMED",
+    "category": "behavior"
+  },
+  {
+    "id": 2,
+    "github_url": "https://github.com/pallets/flask/issues/4000",
+    "title": "Documentation states Flask 2.0 requires Python 2.7",
+    "description": "The setup.py says Python >= 3.6, but the issue reporter claims documentation says Python 2.7 is mandatory.",
+    "reference_label": "INVALID",
+    "category": "documentation"
+  },
+  {
+    "id": 3,
+    "github_url": "https://github.com/tiangolo/fastapi/issues/3000",
+    "title": "Intermittent timeout on custom async loop under heavy load",
+    "description": "User experiences random socket timeouts under a custom event loop architecture with non-standard SSL proxy.",
+    "reference_label": "CANNOT_REPRODUCE",
+    "category": "performance"
+  },
+  {
+    "id": 4,
+    "github_url": "https://github.com/encode/httpx/issues/2100",
+    "title": "Incorrect timeout inheritance in Client child requests",
+    "description": "Child requests do not inherit client base timeout when timeout=None is explicitly provided.",
+    "reference_label": "CONFIRMED",
+    "category": "behavior"
+  },
+  {
+    "id": 5,
+    "github_url": "https://github.com/pydantic/pydantic/issues/4500",
+    "title": "Validator decorator claims to execute before root validator in all cases",
+    "description": "Reporter claims field validator executes before root validator regardless of pre=True/False flags.",
+    "reference_label": "INVALID",
+    "category": "functionality"
+  }
+]
