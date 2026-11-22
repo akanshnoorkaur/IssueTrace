@@ -71,13 +71,13 @@ async def lifespan(app: FastAPI):
 
 # Create FastAPI app
 app = FastAPI(
-    title="IssueLens",
-    description="Evidence-based AI-powered GitHub Issue and Pull Request Triage",
-    version="0.1.0",
+    title="IssueTrace",
+    description="IssueTrace — AI-powered GitHub Issue Intelligence Platform. Every claim has a trail. Follow the evidence.",
+    version="0.2.0",
     lifespan=lifespan,
 )
 
-# CORS middleware — allows the React frontend to call the API
+# CORS middleware — allows the frontend to call the API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -85,6 +85,9 @@ app.add_middleware(
         "http://localhost:3000",  # Alternative dev port
         "http://127.0.0.1:5173",
         "http://127.0.0.1:3000",
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "*",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -103,8 +106,9 @@ async def root(request: Request):
         return FileResponse(str(INDEX_HTML))
     return {
         "app": "IssueLens",
-        "tagline": "Evidence Before Judgment",
-        "version": "0.1.0",
+        "platform": "IssueTrace",
+        "tagline": "Every claim has a trail. Follow the evidence.",
+        "version": "0.2.0",
         "docs": "/docs",
         "app_url": "/app",
     }
@@ -115,4 +119,4 @@ async def serve_app():
     """Explicit endpoint to serve the frontend application."""
     if INDEX_HTML.exists():
         return FileResponse(str(INDEX_HTML))
-    return HTMLResponse("<h1>IssueLens</h1><p>index.html not found</p>")
+    return HTMLResponse("<h1>IssueTrace</h1><p>index.html not found</p>")

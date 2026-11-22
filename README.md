@@ -1,6 +1,6 @@
-# IssueLens — Evidence Before Judgment 🔍
+# IssueTrace — Every claim has a trail. Follow the evidence. 🔍
 
-> **AI-Powered GitHub Issue & Pull Request Triage Engine**  
+> **AI-Powered GitHub Issue Intelligence Platform**  
 > Investigates technical claims using real repository evidence, AST code structures, tests, and Gemini 3.8 Flash.
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
@@ -10,11 +10,11 @@
 
 ---
 
-## 🎯 What is IssueLens?
+## 🎯 What is IssueTrace?
 
 Open-source maintainers face overwhelming volumes of bug reports, feature requests, and pull requests—many of which contain invalid technical assumptions, hallucinations, regressions, or unreproducible claims.
 
-Instead of a generic chatbot, **IssueLens** acts as a technical investigation tool:
+Instead of a generic chatbot, **IssueTrace** acts as a technical investigation tool:
 1. **Retrieves** GitHub issue / PR details, file trees, commit metadata, tests, and documentation.
 2. **Extracts** discrete atomic technical claims with expected vs. reported behavior.
 3. **Gathers** concrete evidence (source lines, AST function definitions, test suites, docstrings).
@@ -28,8 +28,7 @@ Instead of a generic chatbot, **IssueLens** acts as a technical investigation to
 
 ### Option 1: Direct Browser Opening (Zero Setup)
 Simply open the included `index.html` in any web browser:
-- Double-click **`index.html`** in this project folder, or
-- Open `file:///Users/akanshnoorkaur234/first_project/index.html` in Chrome/Safari/Firefox.
+- Double-click **`index.html`** in this project folder, or open in Chrome/Safari/Firefox.
 
 The UI loads immediately with full dashboard capabilities, claim exploration, evidence inspection, and 1-click test cases.
 
